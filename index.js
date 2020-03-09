@@ -88,6 +88,7 @@ mongoclient.connect(db_uri, (error, dbclient) => {
   });
 });
 
-const server = http.listen(8080, function() {
-  console.log("listening on *:8080");
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Server started");
 });
+
